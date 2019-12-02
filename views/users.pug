@@ -1,0 +1,24 @@
+extends layout
+
+block content
+  h1 Mes Utilisateurs
+  each user in users
+    .docs-demo.columns
+      .column.col-6.col-xs-12
+        .panel
+          .panel-header.text-center
+            figure.avatar.avatar-lg
+              img(src='', alt='Avatar')
+            .panel-title.h5.mt-10
+            = user.name
+            .panel-subtitle
+            =user.username
+          
+          .panel-body
+            .tile.tile-centered
+              .tile-content
+                .tile-title.text-bold E-mail
+                .tile-subtitle
+                = user.email
+
+
